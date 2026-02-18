@@ -45,18 +45,26 @@ int main() {
         tabuleiro[linhaV + i][colunaV] = navioVertical[i];
     }
 
-    // ==========================
-    // 5. Mostrando o tabuleiro
-    // ==========================
+    printf("\n   ");
 
-    printf("\nTABULEIRO:\n\n");
+// Imprime o tabuleiro
+for(int coluna = 0; coluna < tamanhoTabuleiro; coluna++) {
+    printf("%c ", 'A' + coluna);
+}
+printf("\n");
 
-    for(int linha = 0; linha < tamanhoTabuleiro; linha++) {
-        for(int coluna = 0; coluna < tamanhoTabuleiro; coluna++) {
-            printf("%d ", tabuleiro[linha][coluna]);
-        }
-        printf("\n");
+for(int linha = 0; linha < tamanhoTabuleiro; linha++) {
+
+    // Imprime número da linha
+    printf("%2d ", linha + 1);
+
+    for(int coluna = 0; coluna < tamanhoTabuleiro; coluna++) {
+        printf("%d ", tabuleiro[linha][coluna]);
     }
+
+    printf("\n");
+}
+
 
     return 0;
 }
